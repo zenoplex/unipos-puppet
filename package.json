@@ -1,0 +1,50 @@
+{
+  "name": "unipos-puppet",
+  "version": "0.0.1",
+  "description": "auto unipos playground",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "node -r babel-register src/index",
+    "start:heroku": "node dist",
+    "lint": "eslint .",
+    "typecheck": "flow check",
+    "build": "babel src -d dist",
+    "build:watch": "babel --watch src -d dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "heroku-postbuild": "yarn run clean && yarn build"
+  },
+  "keywords": [
+    "unipos",
+    "puppeteer"
+  ],
+  "author": "Gen Ichino",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-basic-auth": "^1.1.2",
+    "puppeteer": "^0.10.2",
+    "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "flow-bin": "^0.52.0",
+    "flow-typed": "^2.1.5",
+    "jest": "^20.0.4",
+    "prettier-eslint": "^6.4.2"
+  },
+  "engines": {
+    "node": "8.4.0",
+    "yarn": "1.0.2"
+  }
+}

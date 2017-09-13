@@ -1,0 +1,11 @@
+{
+  "presets": ["flow"],
+  "plugins": [],
+  "env": {
+    "production": {
+      "comments": false,
+      "minified": true
+    }
+  },
+  "retainLines": true
+}
