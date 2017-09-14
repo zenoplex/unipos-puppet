@@ -30,7 +30,6 @@ app
     } catch (error) {
       res.status(422);
       res.json({ status: 'error', message: error.message });
-      process.exit(1);
     }
   })
   .post('/unipos', async (req, res) => {
@@ -41,7 +40,6 @@ app
     } catch (error) {
       res.status(422);
       res.json({ status: 'error', message: error.message });
-      process.exit(1);
     }
   })
   .listen(port, () => {
